@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formal Suits, Shoes &amp; Accessories | Products — Formality Clothing</title>
+  <meta name="description" content="Browse Formality Clothing's range of premium formal suits, leather shoes, blazers and accessories. Quality tailoring, guaranteed fit, Port Elizabeth & Cape Town.">
+  <meta name="keywords" content="formal suits South Africa, leather shoes, men's blazers, silk ties, formal wear Port Elizabeth">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Formality Clothing</div>
+    <button class="nav-toggle">☰ Menu</button>
+    <nav>
+      <a href="Index.html">Home</a>
+      <a href="About us.html">About</a>
+      <a href="Products.html" class="active">Products</a>
+      <a href="Enquiry.html">Enquiry</a>
+      <a href="Contact Us.html">Contact</a>
+      <span>Cart:<span class="cart-count">0</span></span>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h1>Our Products</h1>
+    <p>Browse our range of premium formal wear</p>
+  </div>
+
+  <main>
+    <div class="section">
+      <h2>Available Stock</h2>
+      <div class="gold-line"></div>
+
+      <!-- SEARCH / FILTER -->
+      <div class="filter-bar">
+        <input type="text" id="productSearch" placeholder="Search products..." aria-label="Search products">
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="suits">Suits &amp; Blazers</option>
+          <option value="shoes">Shoes</option>
+          <option value="accessories">Accessories</option>
+        </select>
+        <select id="sortOrder" aria-label="Sort products">
+          <option value="default">Sort: Default</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
+      </div>
+
+      <!-- PRODUCTS DYNAMICALLY RENDERED HERE -->
+      <table class="product-table" id="productTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody">
+          <!-- JS injects rows here -->
+        </tbody>
+      </table>
+      <p id="noResults" class="no-results" hidden>No products match your search.</p>
+
+    </div>
+
+    <!-- GALLERY WITH LIGHTBOX -->
+    <div class="section">
+      <h2>Product Gallery</h2>
+      <div class="gold-line"></div>
+      <div class="gallery" id="productGallery">
+        <!-- JS injects gallery thumbnails here -->
+      </div>
+    </div>
+
+    <!-- ABOUT TABS / ACCORDION -->
+    <div class="section">
+      <h2>Product Care &amp; Sizing</h2>
+      <div class="gold-line"></div>
+
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="sizing">Sizing Guide</button>
+          <button class="tab-btn" data-tab="care">Care Instructions</button>
+          <button class="tab-btn" data-tab="delivery">Delivery &amp; Returns</button>
+        </div>
+
+        <div class="tab-panel active" id="sizing">
+          <p>Our suits are available in sizes 36 to 52 (chest), with regular, short and long fits. For the most accurate fit, we recommend booking an in-store measurement at one of our branches.</p>
+        </div>
+        <div class="tab-panel" id="care">
+          <p>Dry clean suits and blazers only. Leather shoes should be wiped with a soft cloth and conditioned every few months to maintain their finish.</p>
+        </div>
+        <div class="tab-panel" id="delivery">
+          <p>Orders are processed within 2–3 business days. Returns are accepted within 14 days of delivery, provided items are unworn and in original packaging.</p>
+        </div>
+      </div>
+
+      <!-- ACCORDION (FAQ STYLE) -->
+      <div class="accordion" style="margin-top:30px;">
+        <div class="accordion-item">
+          <button class="accordion-header">Do you offer custom tailoring?</button>
+          <div class="accordion-body">
+            <p>Yes, we offer made-to-measure tailoring on selected suits. Speak to our team via the Enquiry page for pricing and turnaround time.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Can I exchange a product for a different size?</button>
+          <div class="accordion-body">
+            <p>Absolutely. Exchanges are free within 14 days of purchase, subject to stock availability.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Do you ship outside Port Elizabeth and Cape Town?</button>
+          <div class="accordion-body">
+            <p>Yes, we deliver nationwide across South Africa via courier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORE LOCATIONS MAP -->
+    <div class="section">
+      <h2>Visit Us In-Store</h2>
+      <div class="gold-line"></div>
+      <p>See our suits and shoes in person at one of our two branches.</p>
+      <div id="storeMap"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Formality Clothing</p>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="" id="lightboxImg">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

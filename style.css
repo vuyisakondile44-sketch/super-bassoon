@@ -1,0 +1,466 @@
+/* =============================================
+   style.css — Formality Clothing
+   ============================================= */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main { flex: 1; }
+
+/* ── HEADER & NAV ── */
+header {
+  background-color: #0d1f4c;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #c9a84c;
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+nav { display: flex; gap: 20px; }
+
+nav a {
+  color: #ccd6f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #c9a84c;
+}
+
+/* ── MOBILE NAV TOGGLE ── */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* ── CART COUNT BADGE ── */
+.cart-count {
+  background-color: #c9a84c;
+  color: #0d1f4c;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+}
+
+/* ── PAGE BANNER ── */
+.banner {
+  background-color: #0d1f4c;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner h1 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #f0e6cc;
+  margin-bottom: 12px;
+}
+
+.banner p {
+  font-size: 0.95rem;
+  color: #aab4d4;
+  margin-bottom: 6px;
+}
+
+/* ── CONTENT SECTION ── */
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.section h2 {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #0d1f4c;
+  margin-bottom: 14px;
+}
+
+.section p {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.gold-line {
+  width: 50px;
+  height: 2px;
+  background-color: #c9a84c;
+  margin-bottom: 30px;
+}
+
+/* ── CARDS ── */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dde2f0;
+  width: 280px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  background: #eef0f7;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: #0d1f4c;
+  margin-bottom: 6px;
+}
+
+.card-body p {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── BUTTON ── */
+.btn {
+  display: inline-block;
+  padding: 11px 30px;
+  background-color: #c9a84c;
+  color: #111;
+  border: none;
+  font-size: 0.85rem;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover { background-color: #e0be6a; }
+
+/* ── TABLE (Products) ── */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.product-table th {
+  background-color: #0d1f4c;
+  color: #f0e6cc;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.product-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e4f0;
+  color: #333;
+  vertical-align: middle;
+}
+
+.product-table tr:hover td { background-color: #f4f6fc; }
+
+.product-table img {
+  display: block;
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  background: #eee;
+}
+
+/* ── FORM ── */
+.form-wrap {
+  max-width: 540px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c4cce0;
+  font-family: Arial, sans-serif;
+  font-size: 0.88rem;
+  color: #222;
+  background: #fafbff;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #c9a84c;
+}
+
+.form-group textarea { height: 120px; resize: vertical; }
+
+/* ── CONTACT INFO ── */
+.contact-info {
+  margin-top: 30px;
+  background: #f4f6fc;
+  border-left: 3px solid #c9a84c;
+  padding: 20px 24px;
+}
+
+.contact-info h3 {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #0d1f4c;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background-color: #0d1f4c;
+  color: #aab4d4;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.78rem;
+}
+
+/* ── FILTER / SEARCH BAR ── */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 14px;
+  border: 1px solid #c4cce0;
+  background: #fafbff;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #222;
+  outline: none;
+}
+
+.filter-bar input { flex: 1; min-width: 180px; }
+
+.filter-bar input:focus,
+.filter-bar select:focus { border-color: #c9a84c; }
+
+.no-results {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ── GALLERY + LIGHTBOX ── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #dde2f0;
+  transition: opacity 0.2s ease;
+}
+
+.gallery img:hover { opacity: 0.8; }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 31, 76, 0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: 85vw;
+  max-height: 75vh;
+  border: 3px solid #c9a84c;
+}
+
+.lightbox p {
+  color: #f0e6cc;
+  margin-top: 14px;
+  font-family: Georgia, serif;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 36px;
+  color: #f0e6cc;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.lightbox-close:hover { color: #c9a84c; }
+
+/* ── TABS ── */
+.tab-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #e0e4f0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn.active {
+  color: #0d1f4c;
+  border-bottom-color: #c9a84c;
+}
+
+.tab-panel {
+  display: none;
+  padding: 20px 4px;
+}
+
+.tab-panel.active { display: block; }
+
+/* ── ACCORDION ── */
+.accordion-item {
+  border-bottom: 1px solid #e0e4f0;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 16px 4px;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #0d1f4c;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header::after {
+  content: '+';
+  color: #c9a84c;
+  font-size: 1.2rem;
+  margin-left: 12px;
+}
+
+.accordion-header.open::after { content: '−'; }
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 4px;
+}
+
+.accordion-body p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.7;
+  padding-bottom: 16px;
+}
+
+/* ── MAP ── */
+#storeMap {
+  height: 350px;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #dde2f0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  header { flex-direction: row; flex-wrap: wrap; padding: 16px 20px; }
+  .nav-toggle { display: block; }
+  header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  header nav.open { display: flex; }
+  .banner h1 { font-size: 1.6rem; }
+  .section { padding: 36px 18px; }
+  .cards { flex-direction: column; align-items: center; }
+  .product-table th, .product-table td { padding: 8px 10px; }
+}
